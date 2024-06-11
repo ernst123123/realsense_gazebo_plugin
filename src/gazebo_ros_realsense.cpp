@@ -83,7 +83,7 @@ void GazeboRosRealsense::OnNewFrame(const rendering::CameraPtr cam,
   // set image encoding
   const std::map<std::string, std::string> supported_image_encodings = {
       {"RGB_INT8", sensor_msgs::image_encodings::RGB8},
-      {"L_INT8", sensor_msgs::image_encodings::TYPE_8UC1}};
+      {"L_INT8", sensor_msgs::image_encodings::MONO8}};
   const auto pixel_format = supported_image_encodings.at(cam->ImageFormat());
 
   // copy from simulation image to ROS msg
